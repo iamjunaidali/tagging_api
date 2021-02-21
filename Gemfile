@@ -36,7 +36,7 @@ gem 'pronto-rails_best_practices', require: false
 gem 'pronto-rubocop', require: false
 gem 'thor', '~> 0.20.3'
 
-#For test coverage
+# For test coverage
 gem 'simplecov', require: false
 
 group :development, :test do
