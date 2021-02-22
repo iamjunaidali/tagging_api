@@ -95,3 +95,44 @@ Parameters:
                     text: 'This is a test comment.'
                   }
     }
+
+### Tag
+ API: Create a Tag
+Method: `POST`
+url:  `/api/v1/tags`
+Parameters:
+ 
+    Tag Headers (Parameters)
+    {
+      tags: {
+        name: Faker::Name.name
+      }
+    }
+
+### Sub-Tag
+ API: Create a Sub-Tag
+Method: `POST`
+url:  `/api/v1/sub_tags`
+Parameters:
+ 
+    Tag Headers (Parameters)
+    {
+      sub_tags: {
+        tag_id: 1,
+        name: Faker::Name.name
+      }
+    }
+
+### Campaign Tag
+ API: Tag a Campaign
+Method: `POST`
+url:  `/api/v1/campaigns/add_tag`
+Parameters:
+ 
+    Campaign Tag Headers (Parameters)
+    { 
+        campaign: {
+            id: campaign.id,
+            tag_id: tag.id
+        }
+    }

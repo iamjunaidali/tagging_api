@@ -34,7 +34,7 @@ module Api
       end
 
       def model
-        controller_name.singularize.capitalize.constantize
+        controller_name.camelize.singularize.constantize
       end
 
       def self.actions(*actions)
