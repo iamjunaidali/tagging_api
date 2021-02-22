@@ -33,7 +33,7 @@
 ### Sign-in
 Method: `POST`
 url:  `/api/v1/auth/sign_in`
- Parameters:
+Parameters:
  
     Login Headers (Parameters)
     { email: "some@email.com", password: "somepassword" }
@@ -42,7 +42,7 @@ url:  `/api/v1/auth/sign_in`
 The sign-out is dependant on sign-in response header attributes
 Method: `DELETE`
 url:  `/api/v1/auth/sign_out`
- Parameters:
+Parameters:
 
     Logout Headers (Parameters)
      {
@@ -55,13 +55,28 @@ url:  `/api/v1/auth/sign_out`
  API: Create Campaign
 Method: `POST`
 url:  `/api/v1/campaigns`
- Parameters:
+Parameters:
  
     Campaign Headers (Parameters)
     { 
         campaign:  { 
-                        user_id: 1, title: "C1", 
-                        duration: "within 1 week", 
-                        purpose: "test"
+                        user_id: 1, 
+                        title: 'C1', 
+                        duration: 'within 1 week', 
+                        purpose: 'test'
                     }
+    }
+
+### Campaign Topic
+ API: Create a Campaign Topic
+Method: `POST`
+url:  `/api/v1/topics`
+Parameters:
+ 
+    Campaign Headers (Parameters)
+    { 
+        campaign_topic: { 
+                            campaign_id: 1,
+                            name: 'Campaign Tag',
+                         }
     }
