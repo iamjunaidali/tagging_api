@@ -73,10 +73,25 @@ Method: `POST`
 url:  `/api/v1/topics`
 Parameters:
  
-    Campaign Headers (Parameters)
+    Campaign Topic Headers (Parameters)
     { 
         campaign_topic: { 
                             campaign_id: 1,
                             title: 'Campaign Tag',
                          }
+    }
+
+### Comment
+ API: Create a Campaign Topic
+Method: `POST`
+url:  `/api/v1/comments`
+Parameters:
+ 
+    Comment Headers (Parameters)
+    {
+        comments: {
+                    campaign_id: 1,
+                    topic_id: 1,
+                    text: 'This is a test comment.'
+                  }
     }

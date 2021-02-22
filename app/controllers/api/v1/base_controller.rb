@@ -29,12 +29,20 @@ module Api
         @new_resource ||= model.new(permitted_params)
       end
 
+      def resource
+        @resource ||= model.find_by!(id: permitted_params[:id])
+      end
+
       def model
         controller_name.singularize.capitalize.constantize
       end
 
       def self.actions(*actions)
         send :public, *actions
+      end
+
+      def permitted_params
+        {}
       end
     end
   end
