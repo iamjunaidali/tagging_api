@@ -6,7 +6,7 @@ module Api
       private
 
       def permitted_params
-        params.require(:campaign_topic).permit(:name, :campaign_id)
+        params.require(:campaign_topic).permit(:title, :campaign_id)
       end
 
       def resource

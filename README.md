@@ -77,6 +77,6 @@ Parameters:
     { 
         campaign_topic: { 
                             campaign_id: 1,
-                            name: 'Campaign Tag',
+                            title: 'Campaign Tag',
                          }
     }
