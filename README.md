@@ -27,7 +27,7 @@
 - bundle exec rspec
 
 
-#API Endpoints
+# API Endpoints
 
 ## User:
 ### Sign-in
