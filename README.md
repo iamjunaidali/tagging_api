@@ -27,10 +27,10 @@
 - bundle exec rspec
 
 
-##API Endpoints
+#API Endpoints
 
-### User:
-#### Sign-in
+## User:
+### Sign-in
 Method: `POST`
 url:  `/api/v1/auth/sign_in`
  Parameters:
@@ -38,7 +38,7 @@ url:  `/api/v1/auth/sign_in`
     Login Headers (Parameters)
     { email: "some@email.com", password: "somepassword" }
 
-#### Sign-out
+### Sign-out
 The sign-out is dependant on sign-in response header attributes
 Method: `DELETE`
 url:  `/api/v1/auth/sign_out`
@@ -50,3 +50,18 @@ url:  `/api/v1/auth/sign_out`
         'client' => response.headers['client'],
         'access-token' => response.headers['access-token']
      }
+
+### Campaign
+ API: Create Campaign
+Method: `POST`
+url:  `/api/v1/campaigns`
+ Parameters:
+ 
+    Campaign Headers (Parameters)
+    { 
+        campaign:  { 
+                        user_id: 1, title: "C1", 
+                        duration: "within 1 week", 
+                        purpose: "test"
+                    }
+    }
