@@ -194,3 +194,7 @@ Style/SymbolArray:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+Lint/IneffectiveAccessModifier:
+  Exclude:
+    - 'app/controllers/api/v1/base_controller.rb'
