@@ -1,5 +1,6 @@
 class Campaign < ApplicationRecord
   belongs_to :user
+  has_one :topic
 
   DURATION = [
     'within 1 week',
