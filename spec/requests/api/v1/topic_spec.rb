@@ -6,7 +6,7 @@ RSpec.describe 'Topic', type: :request do
     @campaign_topic_params = {
       campaign_topic: {
         campaign_id: @campaign.id,
-        name: 'Campaign Tag'
+        title: 'Campaign Tag'
       }
     }
   end
@@ -34,7 +34,7 @@ RSpec.describe 'Topic', type: :request do
       before do
         @campaign_topic_params = {
           campaign_topic: {
-            name: 'Campaign Tag'
+            title: 'Campaign Tag'
           }
         }
         post @create_campaign_topic_url, params: @campaign_topic_params, as: :json

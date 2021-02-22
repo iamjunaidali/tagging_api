@@ -6,11 +6,7 @@ module Api
       private
 
       def permitted_params
-        params.require(:campaign_topic).permit(:name, :campaign_id)
-      end
-
-      def resource
-        @resource ||= model.find_by!(id: permitted_params[:id])
+        params.require(:campaign_topic).permit(:title, :campaign_id)
       end
     end
   end

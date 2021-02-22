@@ -1,4 +1,6 @@
 class Topic < ApplicationRecord
   belongs_to :campaign
-  validates :name, presence: true
+  has_many :comments
+
+  validates :title, presence: true
 end
