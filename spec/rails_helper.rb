@@ -6,7 +6,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'support/factory_bot'
-require 'database_cleaner'
+require 'support/database_cleaner'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -63,22 +63,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
-
-  config.before do
-    DatabaseCleaner[:active_record].strategy = :transaction
-    DatabaseCleaner.start
-  end
-
-  config.after do
-    DatabaseCleaner.clean
-  end
-
-  config.before(:suite) do
-    DatabaseCleaner[:active_record].strategy = :truncation
-    DatabaseCleaner.start
-  ensure
-    DatabaseCleaner.clean
-  end
 
   Shoulda::Matchers.configure do |configuration|
     configuration.integrate do |with|
