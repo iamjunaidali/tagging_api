@@ -1,7 +1,9 @@
 class Campaign < ApplicationRecord
   belongs_to :user
-  has_one :topic
-  has_many :comments
+  has_one :topic, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
 
   DURATION = [
     'within 1 week',
